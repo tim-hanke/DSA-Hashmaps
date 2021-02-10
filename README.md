@@ -13,9 +13,12 @@ Walk through the `HashMap` implementation in the curriculum and understand it we
 - Add the following items to your hash map: `{"Hobbit": "Bilbo"}`, `{"Hobbit": "Frodo"}`, `{"Wizard": "Gandalf"}`, `{"Human": "Aragorn"}`, `{"Elf": "Legolas"}`, `{"Maiar": "The Necromancer"}`,
   `{"Maiar": "Sauron"}`, `{"RingBearer": "Gollum"}`, `{"LadyOfLight": "Galadriel"}`, `{"HalfElven": "Arwen"}`, `{"Ent": "Treebeard"}`
 - Print your hash map and notice the length and items that are hashed in your hash map. Have you hashed all the items you were asked to?
+  > I set 11 times, but the values for `Hobbit` and `Maiar` were overwritten.
 - Retrieve the value that is hashed in the key `"Maiar"` and `Hobbit`.
 - What are the values of `Maiar` and `Hobbit` that you have? Is there a discrepancy? Explain your answer.
+  > Getting `Maiar` receives `Sauron` and `Hobbit` gets `Frodo`. Both the second values set for those keys.
 - What is the capacity of your hash table after you have hashed all the above items? Explain your answer.
+  > The capacity is 24 because the hash table was resized once `length` / `capacity` went over the `MAX_LOAD_RATIO` of `0.5`. In other words, with an initial `capacity` of 8, the hash table was resized when `length` reached 5.
 
 ## 2. WhatDoesThisDo
 
